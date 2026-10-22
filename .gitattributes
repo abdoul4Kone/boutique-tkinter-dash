@@ -1,0 +1,5 @@
+# Garder le texte en LF dans le dépôt et dans les copies de travail, y compris sous Windows.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary

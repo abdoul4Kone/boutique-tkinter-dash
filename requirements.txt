@@ -1,0 +1,13 @@
+customtkinter==6.0.0
+ttkbootstrap==2.2.3
+Pillow==12.3.0
+mysql-connector-python==26.7.0
+pandas==3.0.6
+numpy==2.5.4
+dash==4.4.1
+PyMySQL==1.2.3
+SQLAlchemy==2.1.5
+plotly==7.1.0
+scikit-learn==1.9.1
+xgboost==3.4.1
+Faker==40.43.0

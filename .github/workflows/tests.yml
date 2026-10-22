@@ -1,0 +1,23 @@
+name: Tests Python
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-lock.txt
+      - name: Installer l'environnement vérifié
+        run: python -m pip install -r requirements-lock.txt
+      - name: Vérifier les dépendances
+        run: python -m pip check
+      - name: Tester sans serveur ni données personnelles
+        run: python -B -m unittest discover -s tests -v
